@@ -9,7 +9,7 @@ export const Hero = () => {
       <div className="container">
         <div className="md:flex items-center">
         <div className="md:w-[478px]">
-          <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight">Since 2000</div>
+          <div className="tag">Since 2000</div>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6 pb-1">Bhagyoday Engineering</h1>
           <p className="text-xl text-[#010D3E] tracking-tight mt-6">At Bhagyoday Engineering, we provide expert civil and electrical contracting services, customized to meet your specific needs. Our skilled team ensures every project is completed with precision, safety, and efficiency, from planning to execution. Whether building infrastructure or powering systems, we deliver reliable and sustainable solutions you can trust.</p>
           <div className="flex gap-1 items-center mt-[30px]"> 
