@@ -1,7 +1,3 @@
-import Image from "next/image";
-import productImage from "../assets/product-image.png";
-import pyramidImage from "../assets/pyramid.png";
-import tubeImage from "../assets/tube.png";
 
 const projects = [
   {

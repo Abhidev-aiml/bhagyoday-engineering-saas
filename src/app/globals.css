@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+  .card{
+    @apply p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full
+  }
   .btn {
     @apply rounded-lg px-4 py-2 font-medium inline-flex items-center justify-center tracking-tight;
   }
