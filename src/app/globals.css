@@ -3,29 +3,72 @@
 @tailwind utilities;
 
 @layer components {
-    .btn {
-        @apply rounded-lg px-4 py-2 font-medium inline-flex items-center justify-center tracking-tight;
-    }
-    .btn-primary {
-        @apply  bg-black text-white;
-    }
-    .btn-text {
-        @apply text-black bg-transparent;
-    }
-    .logo-ticker-image {
-        @apply h-8 w-auto;
-    }
-    .tag {
-        @apply text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight;
-    }
-    .section-title {
-        @apply text-center text-3xl md:text-5xl md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text;
-    }
-    .section-description {
-       @apply text-center text-[22px] leading-[30px] tracking-tight text-[#010D3E];
-    }
-    .section-heading{
-        @apply max-w-[600px] mx-auto;
-    }
-}
+  .card{
+    @apply p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full
+  }
+  .btn {
+    @apply rounded-lg px-4 py-2 font-medium inline-flex items-center justify-center tracking-tight;
+  }
 
+  .btn-primary {
+    @apply bg-black text-white transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg;
+  }
+
+  .btn-text {
+    @apply text-black bg-transparent;
+  }
+
+  .logo-ticker-image {
+    @apply h-8 w-auto;
+  }
+
+  .tag {
+    @apply text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight;
+  }
+
+  .section-title {
+    @apply text-center text-3xl md:text-5xl md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text;
+  }
+
+  .section-description {
+    @apply text-center text-[22px] leading-[30px] tracking-tight text-[#010D3E];
+  }
+
+  .section-heading {
+    @apply max-w-[600px] mx-auto;
+  }
+
+  /* Spark and Flip Animations */
+  .spark {
+    position: relative;
+  }
+
+  @keyframes flip {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes kitrotate {
+    to {
+      transform: rotate(90deg);
+    }
+  }
+
+  .animate-flip {
+    animation: flip 6s infinite steps(2, end);
+  }
+
+  .animate-kitrotate {
+    animation: kitrotate 3s linear infinite both;
+  }
+
+  .backdrop {
+    background-color: #111;
+    transition: background-color 0.3s ease;
+  }
+
+  .group:hover .backdrop {
+    background-color: #333;
+  }
+}

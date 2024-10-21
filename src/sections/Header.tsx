@@ -7,7 +7,7 @@ export const Navbar = () => {
  return (
 <header className="sticky top-0 backdrop-blur-sm z-20">
 <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-3">
-  <p className="text-white/60 hidden md:inline-block" >Expert Civil & Electrical Contracting, Tailored for You.</p>
+  <p className="text-white/60 hidden md:inline-block" >Govt. Licenced Electrical Contractors and Suppliers.</p>
     <div className="inline-flex gap-1 items-center">
      <p>Get in touch with us</p>
     <Arrowright className = "h-4 w-4 inline-flex justify-center items-center" />
