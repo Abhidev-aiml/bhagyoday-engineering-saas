@@ -1,4 +1,9 @@
-
+"use client";
+import Image from "next/image";
+import pyramidImage from "../assets/pyramid.png";
+import tubeImage from "../assets/tube.png";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 const projects = [
   {
     title: "Solar Power Installation",
@@ -18,8 +23,14 @@ const projects = [
 ];
 
 export const ProjectsSection = () => {
+  const showcaseRef = useRef(null);
+  const {scrollYProgress} = useScroll({
+    target: showcaseRef,
+    offset: ["start end","end start"]
+  })
+  const translateY = useTransform(scrollYProgress, [0,1],[150, -150] );
   return (
-    <section className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip">
+    <section ref={showcaseRef} className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip">
       <div className="container">
         <div className="section-heading">
           <div className="flex justify-center">
@@ -30,7 +41,12 @@ export const ProjectsSection = () => {
             Explore our portfolio of completed civil and electrical projects. From robust infrastructure developments to reliable power systems, each project is a testament to our commitment to precision, safety, and sustainability.
           </p>
         </div>
-
+        {/* Image Bits*/}
+        <div className="relative">
+        <motion.img src={tubeImage.src} alt="Tube Image" height={248} width={248} className="hidden md:block absolute bottom-24 -left-36" style={{translateY,}}  />
+        <motion.img src={pyramidImage.src} height={262} width={262} alt="Pyramid Image" className="hidden md:block absolute -right-36 -top-32" style={{translateY,}} />
+    
+        </div>
         {/* Top 3 Projects */}
         <div className="grid grid-cols-1 gap-6 mt-10 md:grid-cols-2 lg:grid-cols-3">
           {projects.map(({ title, description}, index) => (
@@ -47,7 +63,7 @@ export const ProjectsSection = () => {
 
               {/* Backdrop */}
               <span className="backdrop absolute inset-px rounded-[11px] bg-neutral-950 transition-all duration-200 group-hover:bg-neutral-800" />
-
+              
               {/* Card Content */}
               <div className="relative z-10 space-y-2">
                 <h3 className="text-xl font-semibold text-neutral-200">{title}</h3>
