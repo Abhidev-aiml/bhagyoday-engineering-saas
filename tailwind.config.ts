@@ -23,11 +23,17 @@ const config: Config = {
       },
       animation: {
         shine: "shine 2s linear infinite",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
       keyframes: {
         shine: {
           from: { backgroundPosition: "0 0" },
           to: { backgroundPosition: "-200% 0" },
+        },
+        "border-beam": {
+          "100%": {
+            offsetDistance: "100%",  // Changed "offset-distance" to camelCase for valid JS syntax
+          },
         },
       },
     },

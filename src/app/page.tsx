@@ -1,4 +1,7 @@
+
+import AboutComponent from "@/sections/AboutSection";
 import { CallToAction } from "@/sections/CallToAction";
+import DemoAbout from "@/sections/DemoAbout";
 import { Footer } from "@/sections/Footer";
 import { Navbar } from "@/sections/Header";
 import { Hero } from "@/sections/Hero";
@@ -13,6 +16,7 @@ return <div>
   <Hero />
   <LogoTicker />
   <ProjectsSection />
+  <AboutComponent />
   <Services />
   <Testimonials />
   <CallToAction />
